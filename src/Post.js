@@ -16,25 +16,26 @@ function Post({
     avatar
     }) {
         return (
-            <div className="post">
+            <div className="post" > 
                 <div className="post_avatar">
-                    <Avatar src="https://www.princeton.edu/sites/default/files/styles/half_2x/public/images/2022/02/KOA_Nassau_2697x1517.jpg?itok=iQEwihUn" />
+                    <Avatar src= {avatar} />
                 </div>
                 <div className="post_body">
                     <div className="post_header">
                         <div className="post_headerText">
                             <h3>
-                                Cute Dog {" "} 
-                                <span>
-                                < VerifiedUserIcon className="post_badge" />
+                                {displayName} {" "} 
+                                <span className="post_headerSpecial">
+                                {verified && < VerifiedUserIcon className="post_badge" />} 
+                                {userName}
                                 </span>
                             </h3>
                         </div>
                         <div className="post_headerDescription">
-                            <p>Woof Woof Bitch</p>
+                            <p>{text}</p>
                         </div>
                         <img
-                        src="https://post.healthline.com/wp-content/uploads/2020/08/3180-Pug_green_grass-732x549-thumbnail-732x549.jpg"
+                        src= {image}
                         alt=" "
                         />
                         <div className="post_footer">
